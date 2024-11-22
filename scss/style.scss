@@ -1,0 +1,207 @@
+// Variables
+$primary-color: #007bff;
+$hover-primary-color: #0056b3;
+$dark-color: #333;
+$light-bg: #f8f9fa;
+$border-color: #ddd;
+
+// Header styling
+header {
+  background-color: $light-bg;
+  padding: 10px 0;
+
+  .d-flex align-items-center {
+    img {
+      width: 40px; // Logo size
+    }
+    span {
+      font-weight: bold;
+      color: $primary-color; // Brand color
+    }
+  }
+
+  input.form-control {
+    width: 250px; // Search bar width
+    height: 35px;
+    border-radius: 15px;
+    padding: 0.3rem 1rem;
+    font-size: 14px;
+    border: 1px solid $border-color;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+  }
+
+  .btn-light {
+    font-size: 16px;
+    font-weight: 500;
+    color: $dark-color;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 1.2rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $hover-primary-color;
+    }
+  }
+
+  .text-dark {
+    color: $dark-color;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+//Second header styling
+.secondary-header {
+  background-color: $light-bg;
+  padding: 10px 0;
+
+  .row {
+    display: flex; // Use flexbox for alignment
+    justify-content: space-around; // Space items evenly with equal gaps
+    align-items: center; // Align items vertically in the center
+    text-align: center;
+
+    //.col-auto {
+      flex: 1 1 auto; // Allow flexible sizing
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        color: $dark-color;
+
+        i {
+          font-size: 24px; // Icon size
+        }
+
+        span {
+          margin-top: 5px;
+          font-size: 14px; // Category name font size
+        }
+
+        &:hover {
+          color: $primary-color; // Hover color
+        }
+      }
+    }
+  }
+}
+
+
+// Modal styling
+.modal-content {
+  border-radius: 20px; // Rounded corners
+  max-width: 500px; // Optional: Limit the modal width
+  margin: 0 auto; // Center horizontally
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Subtle shadow for depth
+}
+
+.modal-header {
+  border-bottom: 2px solid $border-color;
+  
+  .modal-title {
+    font-size: 33px;
+    font-weight: bold;
+  }
+}
+
+.modal-body {
+  .row {
+    display: flex; // Ensure all grid items align properly
+    flex-wrap: wrap; // Allow wrapping for multiple rows
+    justify-content: space-between; // Evenly distribute grid items
+
+    .col-md-4 {
+      flex: 0 0 33%; // Ensures three items per row with equal spacing
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+
+      a {
+        display: flex; // Align image and text horizontally
+        align-items: center; // Center vertically
+        justify-content: center; // Center text inside the box
+        width: 100%; // Make the grid items consistent
+        height: 100px; // Fixed height for all items
+        background-color: $light-bg;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        text-decoration: none;
+        color: $dark-color;
+        font-size: 14px;
+        transition: all 0.3s ease;
+
+        img {
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+          border-radius: 5px;
+          object-fit: cover;
+          transition: transform 0.3s ease; // Smooth zoom effect
+        }
+
+        &:hover {
+          background-color: $primary-color;
+          color: #fff;
+          border-color: $primary-color;
+
+          img {
+            filter: brightness(0.9); // Slight dimming effect
+            transform: scale(1.1); // Zoom effect on hover
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments for smaller devices
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+
+    input.form-control {
+      width: 100%; // Full width on small screens
+    }
+
+    .btn-primary {
+      width: 100%; // Full width on mobile
+    }
+  }
+
+  .modal-dialog {
+    max-width: 90%; // Take up more space on smaller screens
+  }
+
+  .modal-body {
+    .row {
+      .col-md-4 {
+        a {
+          font-size: 14px; // Smaller font for category links
+          padding: 10px; // Reduced padding
+        }
+      }
+    }
+  }
+}
