@@ -5,22 +5,17 @@ $dark-color: #333;
 $light-bg: #f8f9fa;
 $border-color: #ddd;
 
-// Header styling
+// Header Styling
 header {
   background-color: $light-bg;
   padding: 10px 0;
 
-  .d-flex align-items-center {
-    img {
-      width: 40px; // Logo size
-    }
-    span {
-      font-weight: bold;
-      color: $primary-color; // Brand color
-    }
+  .logo-img {
+    width: 60px; // Logo size
   }
 
-  input.form-control {
+  .search-bar {
+    display: flex;
     width: 250px; // Search bar width
     height: 35px;
     border-radius: 15px;
@@ -52,7 +47,7 @@ header {
   .btn-primary {
     background-color: $primary-color;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 0.4rem 1.2rem;
     transition: background-color 0.3s ease;
 
@@ -60,65 +55,52 @@ header {
       background-color: $hover-primary-color;
     }
   }
-
-  .text-dark {
-    color: $dark-color;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: $primary-color;
-    }
-  }
 }
 
-//Second header styling
+// Secondary Header Styling
 .secondary-header {
   background-color: $light-bg;
   padding: 10px 0;
 
-  .row {
-    display: flex; // Use flexbox for alignment
-    justify-content: space-around; // Space items evenly with equal gaps
-    align-items: center; // Align items vertically in the center
-    text-align: center;
+  .category-item {
+    text-decoration: none;
+    color: $dark-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    justify-content: space-between;
 
-    //.col-auto {
-      flex: 1 1 auto; // Allow flexible sizing
-      text-align: center;
+    .icon {
+      font-size: 24px; // Icon size
+      transition: transform 0.3s ease;
+    }
 
-      a {
-        text-decoration: none;
-        color: $dark-color;
+    span {
+      margin-top: 5px;
+      font-size: 14px; // Category name font size
+    }
 
-        i {
-          font-size: 24px; // Icon size
-        }
+    &:hover {
+      color: $primary-color; // Hover color
 
-        span {
-          margin-top: 5px;
-          font-size: 14px; // Category name font size
-        }
-
-        &:hover {
-          color: $primary-color; // Hover color
-        }
+      .icon {
+        transform: scale(1.1); // Slight zoom on hover
       }
     }
   }
 }
 
-
-// Modal styling
+// Modal Styling
 .modal-content {
   border-radius: 20px; // Rounded corners
-  max-width: 500px; // Optional: Limit the modal width
   margin: 0 auto; // Center horizontally
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Subtle shadow for depth
 }
 
 .modal-header {
   border-bottom: 2px solid $border-color;
-  
+
   .modal-title {
     font-size: 33px;
     font-weight: bold;
@@ -127,18 +109,15 @@ header {
 
 .modal-body {
   .row {
-    display: flex; // Ensure all grid items align properly
-    flex-wrap: wrap; // Allow wrapping for multiple rows
     justify-content: space-between; // Evenly distribute grid items
 
     .col-md-4 {
-      flex: 0 0 33%; // Ensures three items per row with equal spacing
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 15px;
 
-      a {
+      .category-link {
         display: flex; // Align image and text horizontally
         align-items: center; // Center vertically
         justify-content: center; // Center text inside the box
@@ -152,7 +131,7 @@ header {
         font-size: 14px;
         transition: all 0.3s ease;
 
-        img {
+        .category-img {
           width: 40px;
           height: 40px;
           margin-right: 10px;
@@ -166,7 +145,7 @@ header {
           color: #fff;
           border-color: $primary-color;
 
-          img {
+          .category-img {
             filter: brightness(0.9); // Slight dimming effect
             transform: scale(1.1); // Zoom effect on hover
           }
@@ -176,13 +155,13 @@ header {
   }
 }
 
-// Responsive adjustments for smaller devices
+// Responsive Adjustments
 @media (max-width: 768px) {
   header {
     flex-direction: column;
 
-    input.form-control {
-      width: 100%; // Full width on small screens
+    .search-bar {
+      display: none;
     }
 
     .btn-primary {
@@ -197,11 +176,15 @@ header {
   .modal-body {
     .row {
       .col-md-4 {
-        a {
+        .category-link {
           font-size: 14px; // Smaller font for category links
           padding: 10px; // Reduced padding
         }
       }
     }
   }
+  .secondary-header {
+    display: none;
+  }
 }
+    

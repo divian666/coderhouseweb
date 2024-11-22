@@ -14,20 +14,22 @@
   <!-- Main Header -->
    <header class="bg-light py-2">
     <div class="container d-flex align-items-center justify-content-between">
+      
       <!-- Logo -->
-      <div class="d-flex align-items-center">
-        <img src="logo.png" alt="Catawiki" class="me-2" style="width: 40px;">
-        <span class="fw-bold text-primary">catawiki</span>
-      </div>
+      <img class="logo-img d-flex align-items-center" src="/assets/logo.png" alt="Vendelo">
+    
       <!-- Search Bar -->
-      <input type="text" class="form-control mx-3 flex-grow-1" placeholder="Search for brand, model, artist...">
+      <div class="search-bar flex-grow-1 mx-3">
+        <input type="text" class="form-control" placeholder="Search for brand, model, artist...">
+      </div>
+
       <!-- Navigation -->
       <div class="d-flex align-items-center">
-        <button class="btn btn-light me-3" data-bs-toggle="modal" data-bs-target="#categoriesModal">Categories</button>
-        <a href="#" class="text-dark me-3">Sell</a>
-        <a href="#" class="text-dark me-3">Help</a>
-        <i class="bi bi-heart me-3"></i>
-        <button class="btn btn-primary">Sign in</button>
+        <button class="btn btn-categorias me-3" data-bs-toggle="modal" data-bs-target="#categoriesModal">Categories</button>
+        <a href="#" class="sell text-dark me-3">Sell</a>
+        <a href="#" class="Help text-dark me-3">Help</a>
+        <i class="favorite-button bi-heart me-3"></i>
+        <button class="btn btn-primary me-3">Sign in</button>
       </div>
     </div>
   </header>
