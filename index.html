@@ -10,24 +10,23 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <link rel="stylesheet" href="/scss/style.css">
 </head>
-<body>
   <!-- Main Header -->
    <header class="bg-light py-2">
     <div class="container d-flex align-items-center justify-content-between">
       
       <!-- Logo -->
-      <img class="logo-img d-flex align-items-center" src="/assets/logo.png" alt="Vendelo">
+      <img class="logo-img" src="/assets/logo.png" alt="Vendelo">
     
       <!-- Search Bar -->
       <div class="search-bar flex-grow-1 mx-3">
-        <input type="text" class="form-control" placeholder="Search for brand, model, artist...">
+        <input type="text" class="form-control" placeholder="Busca tu artículo favorito...">
       </div>
 
       <!-- Navigation -->
       <div class="d-flex align-items-center">
-        <button class="btn btn-categorias me-3" data-bs-toggle="modal" data-bs-target="#categoriesModal">Categories</button>
-        <a href="#" class="sell text-dark me-3">Sell</a>
-        <a href="#" class="Help text-dark me-3">Help</a>
+        <button class="btn btn-light me-3" data-bs-toggle="modal" data-bs-target="#categoriesModal">Categorías</button>
+        <a href="#">Sell</a>
+        <a href="#" class="Help text-dark text-decoration-none me-3">Help</a>
         <i class="favorite-button bi-heart me-3"></i>
         <button class="btn btn-primary me-3">Sign in</button>
       </div>
@@ -74,6 +73,67 @@
     </div>
   </div>
   
+    <!-- Carousel -->
+  <section>
+    <div id="textImageCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+       <div class="carousel-item active">
+        <div class="container d-flex align-items-center" style="height: 400px;">
+          <!-- Text Section -->
+          <div class="text-section me-3">
+            <h2>Colección Videos DISNEY</h2>
+            <p>Colección de algunos videos ORIGINALES VHS de DISNEY.</p>
+          </div>
+          <!-- Image Section -->
+          <img src="/assets/disney-collection.png" class="img-fluid rounded" alt="Slide Image">
+         </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="container d-flex align-items-center" style="height: 400px;">
+            <!-- Text Section -->
+            <div class="text-section me-3">
+              <h2>Another Collection</h2>
+              <p>Explore unique fashion pieces that redefine modern style.</p>
+            </div>
+            <!-- Image Section -->
+            <img src="your-image-2.jpg" class="img-fluid rounded" alt="Slide Image">
+          </div>
+        </div>
+      </div>
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#textImageCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#textImageCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <br>
+  <section>
+    <h3>Agregados Recientemente</h3>
+      <div class="carousel-recent-add-iten">
+        <div class="container-recent-add-item">
+          <div class="card-recent-add-item" style="width: 18rem;">
+            <img class="card-image-top" src="assets/pokemon-shinning-cards.jpg" alt="image-recent1">
+            <div class="card-body">
+              <h3>Vendedor: </h3>
+              <p>Nombre del vendedor</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    
+
+
+    
+  </section>
 
   <!-- Categories Modal -->
   <div class="modal fade" id="categoriesModal" tabindex="-1" aria-labelledby="categoriesModalLabel" aria-hidden="true">

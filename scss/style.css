@@ -3,7 +3,7 @@ header {
   padding: 10px 0;
 }
 header .logo-img {
-  width: 60px;
+  width: 140px;
 }
 header .search-bar {
   display: flex;
@@ -126,9 +126,86 @@ header .btn-primary:hover {
   transform: scale(1.1);
 }
 
+body section #textImageCarousel .carousel-inner .carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 300px;
+  overflow: hidden;
+}
+body section #textImageCarousel .carousel-inner .carousel-item .text-section {
+  max-width: 50%;
+  padding-right: 20px;
+}
+body section #textImageCarousel .carousel-inner .carousel-item .text-section h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #182890;
+}
+body section #textImageCarousel .carousel-inner .carousel-item .text-section p {
+  font-size: 1.5rem;
+  color: #666666;
+  line-height: 1.25;
+}
+body section #textImageCarousel .carousel-inner .carousel-item img {
+  max-width: 50%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+body section #textImageCarousel .carousel-item:not(.active) {
+  display: none;
+}
+body section #textImageCarousel .carousel-control-prev,
+body section #textImageCarousel .carousel-control-next {
+  width: 8%;
+  background-color: rgba(3, 13, 149, 0.83);
+  border-radius: 5%;
+}
+body section #textImageCarousel .carousel-control-prev:hover,
+body section #textImageCarousel .carousel-control-next:hover {
+  background-color: rgba(151, 161, 40, 0.3);
+}
+body section .recently-added-container {
+  width: 100vw;
+}
+body section .recently-added-container .recent-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-auto-columns: 25%;
+}
+body section .recently-added-container .recent-carousel .recent-item {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 350px;
+  height: 300px;
+  gap: 1rem;
+}
+body section .recently-added-container .recent-carousel .recent-item .recent-image {
+  width: 50%;
+  min-width: 200px;
+  border-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section .recently-added-container .recent-carousel .recent-item .recent-text h3 {
+  font-size: 1.5rem;
+}
+body section .recently-added-container .recent-carousel .recent-item .recent-text p {
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
+  }
+  header .logo-img {
+    width: 100px;
   }
   header .search-bar {
     display: none;

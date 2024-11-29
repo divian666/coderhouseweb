@@ -11,7 +11,7 @@ header {
   padding: 10px 0;
 
   .logo-img {
-    width: 60px; // Logo size
+    width: 140px; // Logo size
   }
 
   .search-bar {
@@ -155,10 +155,132 @@ header {
   }
 }
 
+body {
+
+  section {
+
+    #textImageCarousel {
+      .carousel-inner {
+        .carousel-item {
+          display: flex; // Align text and image side by side
+          align-items: center; // Center vertically
+          justify-content: space-around; // Space between text and image
+          height: 300px; // Fixed height for consistency
+          overflow: hidden; // Prevent overlapping of content
+    
+          .text-section {
+            max-width: 50%; // Limit the width of the text container
+            padding-right: 20px;
+    
+            h2 {
+              font-size: 3rem;
+              font-weight: bold;
+              color: #182890;
+            }
+    
+            p {
+              font-size: 1.5rem;
+              color: #666666;
+              line-height: 1.25;
+            }
+          }
+    
+          img {
+            max-width: 50%; // Ensure the image is responsive
+            max-height: 100%; // Fit image within the container
+            object-fit: cover; // Maintain aspect ratio
+            flex-shrink: 0; // Prevent image from shrinking
+            border-radius: 5px;
+            margin-top: 15px;  
+          }
+        }
+      }
+    
+      // Ensure only active slides are visible
+      .carousel-item:not(.active) {
+        display: none;
+      }
+    
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 8%;
+        background-color: rgba(3, 13, 149, 0.83);
+        border-radius: 5%;
+    
+        &:hover {
+          background-color: rgba(151, 161, 40, 0.3);
+        }
+      }
+    }
+
+  }
+  
+  section {
+
+    .recently-added-container {
+
+      width: 100vw;
+      //background-color: #182890;
+
+      .recent-carousel {
+
+        display: grid ;
+        grid-auto-flow: column;
+        align-items: center;
+        grid-auto-columns: 25%;
+        
+        
+        .recent-item {
+
+          display: flex;
+          border: 2px solid black;
+          border-radius: 10px;
+          width: 350px;
+          height: 300px;
+          gap: 1rem;
+          
+
+          .recent-image {
+            
+            width: 50%;
+            min-width: 200px;
+            border-radius: 30px;
+            object-fit: cover;
+            //max-height: 200px;
+          }
+          
+          .recent-text {
+
+            h3 {
+              font-size: 1.5rem;
+            }
+
+            p {
+              font-size: 1rem;
+
+            }
+          }
+
+
+        }
+
+      }
+      
+    }
+  }
+  
+}
+    
+
+
 // Responsive Adjustments
 @media (max-width: 768px) {
   header {
     flex-direction: column;
+
+    .logo-img {
+      width: 100px;
+    }
 
     .search-bar {
       display: none;
